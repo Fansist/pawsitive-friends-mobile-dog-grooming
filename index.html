@@ -1,0 +1,1264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pawsitive Friends Mobile Dog Grooming | San Diego Mobile Dog Groomer</title>
+<meta name="description" content="Pawsitive Friends Mobile Dog Grooming brings full-service, stress-free dog grooming to your driveway anywhere in San Diego, CA. Bilingual, owner-operated, text-to-book. Call 619-395-9440.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,450;0,9..144,560;0,9..144,650;0,9..144,720;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* Palette: "driveway golden hour" — terracotta, saffron marigold, deep pine,
+       warm cream. Distinct from generic pastel pet-site defaults: sun-baked,
+       tactile, a little dusty, like a well-loved van parked in late-afternoon light. */
+    --terracotta:#c1552f;
+    --terracotta-dark:#96401f;
+    --terracotta-ink:#7a3418;
+    --saffron:#eba229;
+    --saffron-dark:#c67f14;
+    --pine:#25453c;
+    --pine-dark:#152722;
+    --pine-pale:#e4ede8;
+    --cream:#fbf2e4;
+    --cream-deep:#f3e4c9;
+    --paper:#fffcf6;
+    --ink:#241f19;
+    --ink-soft:#5f5548;
+    --line:#e9d9ba;
+    --line-strong:#dbc599;
+    --focus:#96401f;
+    --radius-xl:30px;
+    --radius-lg:22px;
+    --radius-md:16px;
+    --radius-sm:10px;
+    --shadow-soft:0 12px 30px -16px rgba(36,26,14,0.32);
+    --shadow-lift:0 30px 60px -22px rgba(36,26,14,0.42);
+    --shadow-tight:0 5px 16px -7px rgba(36,26,14,0.3);
+    --ease:cubic-bezier(0.16,1,0.3,1);
+    --ease-spring:cubic-bezier(0.34,1.35,0.64,1);
+  }
+
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Manrope', sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.brand-word{
+    font-family:'Fraunces', serif;
+    font-weight:650;
+    line-height:1.08;
+    color:var(--ink);
+    margin:0;
+    letter-spacing:-0.015em;
+  }
+  p{margin:0 0 1em;}
+  ul{margin:0;padding:0;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+
+  .visually-hidden{
+    position:absolute;
+    width:1px;height:1px;
+    padding:0;margin:-1px;
+    overflow:hidden;
+    clip:rect(0,0,0,0);
+    white-space:nowrap;
+    border:0;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  [tabindex]:focus-visible,
+  summary:focus-visible{
+    outline:3px solid var(--focus);
+    outline-offset:3px;
+    border-radius:6px;
+  }
+
+  .skip-link{
+    position:absolute;
+    left:1rem;
+    top:-4rem;
+    background:var(--terracotta-dark);
+    color:#fff;
+    padding:0.75rem 1.25rem;
+    border-radius:var(--radius-sm);
+    z-index:200;
+    transition:top 0.2s var(--ease);
+    font-weight:700;
+  }
+  .skip-link:focus{top:1rem;}
+
+  .container{
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 1.5rem;
+  }
+
+  /* ---------- Header ---------- */
+  header.site-header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(251,242,228,0.92);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0.8rem 1.5rem;
+    max-width:1200px;
+    margin:0 auto;
+    gap:1rem;
+  }
+  .logo-mark{
+    display:flex;
+    align-items:center;
+    gap:0.65rem;
+    text-decoration:none;
+    color:var(--ink);
+    font-family:'Fraunces', serif;
+    font-size:1.14rem;
+    font-weight:650;
+    letter-spacing:-0.005em;
+    padding:0.25rem;
+    border-radius:10px;
+  }
+  .logo-mark svg{flex-shrink:0;transition:transform 0.4s var(--ease-spring);}
+  .logo-mark:hover svg{transform:rotate(-8deg) scale(1.05);}
+  .logo-mark .brand-accent{color:var(--terracotta-dark);}
+
+  nav.main-nav ul{
+    display:flex;
+    list-style:none;
+    gap:0.35rem;
+    align-items:center;
+  }
+  nav.main-nav a{
+    text-decoration:none;
+    color:var(--ink-soft);
+    font-weight:700;
+    font-size:0.95rem;
+    padding:0.55rem 0.9rem;
+    border-radius:999px;
+    transition:background 0.2s var(--ease), color 0.2s var(--ease);
+  }
+  nav.main-nav a:hover{
+    background:var(--cream-deep);
+    color:var(--terracotta-dark);
+  }
+  .nav-cta{
+    background:var(--terracotta);
+    color:#fff !important;
+    padding:0.6rem 1.15rem !important;
+    border-radius:999px;
+    box-shadow:var(--shadow-tight);
+    transition:background 0.2s var(--ease), transform 0.2s var(--ease), box-shadow 0.2s var(--ease) !important;
+  }
+  .nav-cta:hover{background:var(--terracotta-dark); transform:translateY(-1px);}
+  .nav-cta:active{transform:translateY(0);}
+
+  .nav-toggle{
+    display:none;
+    background:none;
+    border:2px solid var(--line-strong);
+    border-radius:var(--radius-sm);
+    padding:0.5rem 0.65rem;
+    cursor:pointer;
+    transition:border-color 0.2s var(--ease), background 0.2s var(--ease);
+  }
+  .nav-toggle:hover{background:var(--cream-deep);}
+  .nav-toggle svg{display:block;}
+
+  @media (max-width: 780px){
+    nav.main-nav{
+      position:absolute;
+      top:100%;
+      left:0;
+      right:0;
+      background:var(--paper);
+      border-bottom:1px solid var(--line);
+      box-shadow:var(--shadow-soft);
+      display:none;
+    }
+    nav.main-nav.open{display:block;}
+    nav.main-nav ul{
+      flex-direction:column;
+      align-items:stretch;
+      padding:1rem 1.5rem 1.5rem;
+      gap:0.3rem;
+    }
+    nav.main-nav a{
+      display:block;
+      text-align:center;
+      padding:0.85rem 1rem;
+    }
+    .nav-toggle{display:inline-flex;align-items:center;justify-content:center;}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    overflow:hidden;
+    padding:clamp(3.75rem,9vw,7rem) 0 clamp(4.25rem,10vw,7.5rem);
+    background:var(--pine-dark);
+    isolation:isolate;
+  }
+  .hero-scrim{
+    position:absolute;
+    inset:0;
+    z-index:0;
+    background:
+      radial-gradient(ellipse 62% 52% at 16% 12%, rgba(235,162,41,0.30), transparent 60%),
+      radial-gradient(ellipse 58% 62% at 88% 92%, rgba(193,85,47,0.38), transparent 65%),
+      linear-gradient(165deg, #24443c 0%, #17322b 55%, #0f221d 100%);
+  }
+  .hero-art{
+    position:absolute;
+    inset:0;
+    z-index:0;
+    opacity:0.9;
+    pointer-events:none;
+  }
+  .hero-inner{
+    position:relative;
+    z-index:1;
+    max-width:800px;
+    margin:0 auto;
+    padding:0 1.5rem;
+    text-align:center;
+  }
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:0.55rem;
+    background:rgba(255,252,246,0.12);
+    border:1px solid rgba(255,252,246,0.35);
+    color:var(--saffron);
+    font-weight:800;
+    font-size:0.8rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    padding:0.5rem 1.1rem;
+    border-radius:999px;
+    margin-bottom:1.85rem;
+    animation:fadeUp 0.7s var(--ease) both;
+  }
+  .hero h1{
+    color:var(--paper);
+    font-size:clamp(2.4rem, 4.4vw + 1rem, 4.4rem);
+    letter-spacing:-0.02em;
+    animation:fadeUp 0.7s var(--ease) 0.08s both;
+  }
+  .hero h1 .accent{
+    color:var(--saffron);
+    font-style:italic;
+    font-weight:500;
+  }
+  .hero-tagline{
+    margin:1.6rem auto 0;
+    max-width:600px;
+    font-size:clamp(1.05rem, 0.4vw + 1rem, 1.3rem);
+    color:rgba(255,252,246,0.9);
+    font-weight:500;
+    animation:fadeUp 0.7s var(--ease) 0.16s both;
+  }
+  .hero-ctas{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:1rem;
+    margin-top:2.5rem;
+    animation:fadeUp 0.7s var(--ease) 0.24s both;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:0.55rem;
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.05rem;
+    padding:0.95rem 1.85rem;
+    border-radius:999px;
+    text-decoration:none;
+    transition:transform 0.25s var(--ease-spring), box-shadow 0.25s var(--ease), background 0.2s var(--ease), color 0.2s var(--ease);
+    border:2px solid transparent;
+    min-height:44px;
+  }
+  .btn-primary{
+    background:var(--saffron);
+    color:var(--pine-dark);
+    box-shadow:0 16px 32px -14px rgba(235,162,41,0.55);
+  }
+  .btn-primary:hover{
+    background:#f2b856;
+    transform:translateY(-2px);
+    box-shadow:0 20px 40px -14px rgba(235,162,41,0.65);
+  }
+  .btn-primary:active{transform:translateY(0) scale(0.98);}
+  .btn-secondary{
+    background:transparent;
+    color:var(--paper);
+    border-color:rgba(255,252,246,0.55);
+  }
+  .btn-secondary:hover{
+    background:rgba(255,252,246,0.14);
+    border-color:var(--paper);
+    transform:translateY(-2px);
+  }
+  .btn-secondary:active{transform:translateY(0) scale(0.98);}
+  .hero-note{
+    margin-top:1.85rem;
+    font-size:0.92rem;
+    color:rgba(255,252,246,0.78);
+    animation:fadeUp 0.7s var(--ease) 0.3s both;
+  }
+  .hero-note strong{color:rgba(255,252,246,0.95);}
+
+  @keyframes fadeUp{
+    from{opacity:0; transform:translateY(16px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+
+  /* ---------- Section shells ---------- */
+  main section{
+    padding:clamp(3.75rem,7.5vw,6.5rem) 0;
+  }
+  .section-head{
+    max-width:660px;
+    margin:0 auto clamp(2.5rem,4.5vw,3.5rem);
+    text-align:center;
+  }
+  .section-head h2{
+    font-size:clamp(1.9rem, 1.1vw + 1.5rem, 2.7rem);
+  }
+  .section-head p{
+    color:var(--ink-soft);
+    font-size:1.08rem;
+    margin-top:0.9rem;
+  }
+  .kicker{
+    display:inline-flex;
+    align-items:center;
+    gap:0.5rem;
+    font-weight:800;
+    font-size:0.8rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--terracotta-dark);
+    margin-bottom:0.85rem;
+  }
+  .kicker::before{
+    content:"";
+    width:22px;
+    height:2px;
+    background:var(--saffron-dark);
+    border-radius:2px;
+  }
+
+  .reveal{
+    opacity:0;
+    transform:translateY(22px);
+    transition:opacity 0.7s var(--ease), transform 0.7s var(--ease);
+  }
+  .reveal.in-view{
+    opacity:1;
+    transform:translateY(0);
+  }
+  .reveal-stagger.in-view{transition-delay:var(--stagger,0s);}
+
+  /* ---------- About ---------- */
+  .about{
+    background:var(--paper);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .about-grid{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:clamp(2.25rem,5vw,4rem);
+    align-items:center;
+  }
+  .about-art{
+    position:relative;
+    aspect-ratio:4/5;
+    border-radius:var(--radius-xl);
+    background:
+      radial-gradient(circle at 26% 20%, rgba(255,255,255,0.24), transparent 55%),
+      linear-gradient(150deg, var(--pine) 0%, var(--pine-dark) 100%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:var(--shadow-lift);
+    overflow:hidden;
+  }
+  .about-art::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:radial-gradient(circle at 78% 82%, rgba(235,162,41,0.22), transparent 55%);
+  }
+  .about-art svg{width:62%;height:62%;position:relative;z-index:1;}
+  .about-copy h2{margin-bottom:1.15rem;}
+  .about-copy p{
+    color:var(--ink-soft);
+    font-size:1.1rem;
+  }
+  .about-badges{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.75rem;
+    margin-top:1.6rem;
+  }
+  .about-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:0.5rem;
+    background:var(--cream);
+    border:1px solid var(--line);
+    padding:0.6rem 1.05rem;
+    border-radius:999px;
+    font-weight:700;
+    font-size:0.92rem;
+    color:var(--pine-dark);
+    transition:transform 0.2s var(--ease-spring), box-shadow 0.2s var(--ease), border-color 0.2s var(--ease), background 0.2s var(--ease);
+  }
+  .about-badge:hover{
+    transform:translateY(-2px);
+    box-shadow:var(--shadow-tight);
+    border-color:var(--pine);
+    background:var(--paper);
+  }
+
+  @media (max-width: 860px){
+    .about-grid{grid-template-columns:1fr;}
+    .about-art{max-width:320px;margin:0 auto;aspect-ratio:1/1;}
+  }
+
+  /* ---------- Services ---------- */
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(255px, 1fr));
+    gap:1.75rem;
+  }
+  .service-card{
+    position:relative;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--radius-lg);
+    padding:2.2rem 1.9rem;
+    box-shadow:var(--shadow-soft);
+    transition:transform 0.3s var(--ease-spring), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
+  }
+  .service-card:hover{
+    transform:translateY(-7px);
+    box-shadow:var(--shadow-lift);
+    border-color:var(--terracotta);
+  }
+  .service-card::after{
+    content:"";
+    position:absolute;
+    top:0; left:2rem; right:2rem;
+    height:3px;
+    border-radius:0 0 4px 4px;
+    background:linear-gradient(90deg, var(--terracotta), var(--saffron));
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:transform 0.35s var(--ease);
+  }
+  .service-card:hover::after{transform:scaleX(1);}
+  .service-icon{
+    width:58px;
+    height:58px;
+    border-radius:17px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:1.3rem;
+    background:var(--cream-deep);
+    transition:background 0.3s var(--ease), transform 0.3s var(--ease-spring);
+  }
+  .service-card:hover .service-icon{
+    background:var(--saffron);
+    transform:scale(1.06) rotate(-4deg);
+  }
+  .service-icon svg{width:28px;height:28px;}
+  .service-card h3{
+    font-size:1.2rem;
+    margin-bottom:0.55rem;
+  }
+  .service-card p{
+    color:var(--ink-soft);
+    font-size:0.98rem;
+    margin-bottom:0;
+  }
+
+  /* ---------- Gallery (CSS/SVG art — no fake photos) ---------- */
+  .gallery{
+    background:var(--cream-deep);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(210px, 1fr));
+    gap:1.5rem;
+  }
+  .gallery-tile{
+    position:relative;
+    aspect-ratio:1/1;
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    box-shadow:var(--shadow-soft);
+    transition:transform 0.35s var(--ease-spring), box-shadow 0.35s var(--ease);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .gallery-tile:hover{
+    transform:translateY(-6px) scale(1.02);
+    box-shadow:var(--shadow-lift);
+  }
+  .gallery-tile svg{width:56%;height:56%;position:relative;z-index:1;}
+  .gallery-tile .tile-label{
+    position:absolute;
+    left:0; right:0; bottom:0;
+    z-index:1;
+    padding:1.7rem 1rem 1rem;
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:0.98rem;
+    color:#fff;
+    background:linear-gradient(0deg, rgba(0,0,0,0.6), transparent);
+    text-align:center;
+  }
+  .tile-1{background:linear-gradient(150deg,#c67f14,#96401f);}
+  .tile-2{background:linear-gradient(150deg,#3f6357,#152722);}
+  .tile-3{background:linear-gradient(150deg,#eba229,#c1552f);}
+  .tile-4{background:linear-gradient(150deg,#25453c,#0f221d);}
+
+  /* ---------- Highlights strip (bento) ---------- */
+  .highlights{
+    background:linear-gradient(135deg, var(--pine-dark) 0%, var(--pine) 60%, #35594c 100%);
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+  }
+  .highlights::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      radial-gradient(circle at 12% 18%, rgba(235,162,41,0.18), transparent 42%),
+      radial-gradient(circle at 88% 82%, rgba(255,255,255,0.08), transparent 42%);
+    pointer-events:none;
+  }
+  .highlights-grid{
+    position:relative;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(215px, 1fr));
+    gap:1.5rem;
+  }
+  .highlight-item{
+    padding:1.75rem 1.5rem;
+    text-align:left;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.14);
+    border-radius:var(--radius-lg);
+    transition:transform 0.3s var(--ease-spring), background 0.3s var(--ease), border-color 0.3s var(--ease);
+  }
+  .highlight-item:hover{
+    transform:translateY(-5px);
+    background:rgba(255,255,255,0.1);
+    border-color:rgba(255,255,255,0.28);
+  }
+  .highlight-item .num{
+    display:block;
+    font-family:'Fraunces', serif;
+    font-size:2rem;
+    font-weight:650;
+    line-height:1.05;
+    margin-bottom:0.6rem;
+    color:var(--saffron);
+  }
+  .highlight-item .label{
+    display:block;
+    font-weight:600;
+    font-size:1rem;
+    opacity:0.95;
+  }
+  .highlight-item svg{margin-bottom:0.9rem;display:block;}
+
+  /* ---------- FAQ ---------- */
+  .faq{
+    background:var(--paper);
+  }
+  .faq-list{
+    max-width:760px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+  }
+  .faq-item{
+    border:1px solid var(--line);
+    border-radius:var(--radius-md);
+    background:var(--cream);
+    overflow:hidden;
+    transition:border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+  }
+  .faq-item:hover{border-color:var(--terracotta);}
+  .faq-item[open]{box-shadow:var(--shadow-soft); border-color:var(--terracotta);}
+  .faq-item summary{
+    list-style:none;
+    cursor:pointer;
+    padding:1.3rem 1.6rem;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1rem;
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.1rem;
+    color:var(--ink);
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary .plus{
+    flex-shrink:0;
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    background:var(--cream-deep);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:transform 0.3s var(--ease-spring), background 0.3s var(--ease);
+  }
+  .faq-item[open] summary .plus{transform:rotate(135deg); background:var(--saffron);}
+  .faq-answer{
+    padding:0 1.6rem 1.5rem;
+    color:var(--ink-soft);
+    font-size:1.02rem;
+  }
+
+  /* ---------- Visit ---------- */
+  .visit{
+    background:var(--cream-deep);
+  }
+  .visit-grid{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:3rem;
+    align-items:start;
+  }
+  .visit-card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--radius-xl);
+    padding:2.6rem;
+    box-shadow:var(--shadow-soft);
+  }
+  .visit-row{
+    display:flex;
+    gap:1.1rem;
+    align-items:flex-start;
+    padding:1.15rem 0;
+    border-bottom:1px solid var(--line);
+  }
+  .visit-row:last-child{border-bottom:none;}
+  .visit-row .icon{
+    flex-shrink:0;
+    width:46px;
+    height:46px;
+    border-radius:13px;
+    background:var(--cream-deep);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .visit-row .icon svg{width:22px;height:22px;}
+  .visit-row h3{
+    font-size:1.04rem;
+    margin-bottom:0.3rem;
+  }
+  .visit-row p, .visit-row a{
+    color:var(--ink-soft);
+    font-size:0.98rem;
+  }
+  .visit-row a.value-link{
+    color:var(--terracotta-dark);
+    font-weight:700;
+    text-decoration:none;
+    border-bottom:2px solid transparent;
+    transition:border-color 0.2s var(--ease), color 0.2s var(--ease);
+  }
+  .visit-row a.value-link:hover{border-bottom-color:var(--terracotta-dark); color:var(--terracotta-ink);}
+
+  .map-card{
+    border-radius:var(--radius-xl);
+    background:
+      radial-gradient(circle at 20% 20%, rgba(255,255,255,0.2), transparent 50%),
+      linear-gradient(160deg, var(--terracotta) 0%, var(--terracotta-dark) 100%);
+    padding:2.6rem;
+    color:#fff;
+    box-shadow:var(--shadow-lift);
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    min-height:320px;
+    position:relative;
+    overflow:hidden;
+  }
+  .map-card svg.deco{
+    position:absolute;
+    opacity:0.16;
+  }
+  .map-card h3{
+    color:#fff;
+    font-size:1.55rem;
+    margin-bottom:0.8rem;
+  }
+  .map-card p{
+    color:rgba(255,255,255,0.92);
+    font-size:1rem;
+  }
+  .map-card .btn-secondary{
+    background:transparent;
+    color:#fff;
+    border-color:rgba(255,255,255,0.6);
+    margin-top:1.5rem;
+    align-self:flex-start;
+  }
+  .map-card .btn-secondary:hover{
+    background:#fff;
+    color:var(--terracotta-dark);
+    border-color:#fff;
+  }
+
+  @media (max-width: 900px){
+    .visit-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- Final CTA ---------- */
+  .final-cta{
+    text-align:center;
+    background:var(--paper);
+  }
+  .final-cta h2{
+    font-size:clamp(1.9rem, 1.6vw + 1.4rem, 2.7rem);
+    margin-bottom:1rem;
+  }
+  .final-cta p{
+    color:var(--ink-soft);
+    max-width:520px;
+    margin:0 auto 2rem;
+    font-size:1.08rem;
+  }
+  .final-cta .btn-primary{
+    background:var(--terracotta);
+    color:#fff;
+    box-shadow:0 16px 32px -14px rgba(150,64,31,0.5);
+  }
+  .final-cta .btn-primary:hover{
+    background:var(--terracotta-dark);
+    box-shadow:0 20px 40px -14px rgba(150,64,31,0.6);
+  }
+
+  /* ---------- Footer ---------- */
+  footer.site-footer{
+    background:var(--pine-dark);
+    color:#f3ece2;
+    padding:3.5rem 0 2.5rem;
+  }
+  .footer-inner{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:2rem;
+    padding-bottom:2rem;
+    border-bottom:1px solid rgba(255,255,255,0.14);
+  }
+  .footer-brand{
+    display:flex;
+    align-items:center;
+    gap:0.6rem;
+    font-family:'Fraunces', serif;
+    font-size:1.1rem;
+    font-weight:650;
+  }
+  .footer-brand svg{flex-shrink:0;}
+  footer nav ul{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1.5rem;
+    list-style:none;
+  }
+  footer nav a{
+    text-decoration:none;
+    color:#f3ece2;
+    opacity:0.85;
+    font-weight:600;
+    font-size:0.95rem;
+    transition:opacity 0.2s var(--ease);
+  }
+  footer nav a:hover{opacity:1; text-decoration:underline;}
+  .footer-bottom{
+    padding-top:1.75rem;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:1rem;
+    font-size:0.88rem;
+    opacity:0.75;
+  }
+
+  /* ---------- Reduced motion ---------- */
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{
+      animation-duration:0.001ms !important;
+      animation-iteration-count:1 !important;
+      transition-duration:0.001ms !important;
+      scroll-behavior:auto !important;
+    }
+    .reveal,
+    .eyebrow,
+    .hero h1,
+    .hero-tagline,
+    .hero-ctas,
+    .hero-note{
+      opacity:1 !important;
+      transform:none !important;
+      animation:none !important;
+    }
+  }
+</style>
+      <!-- SEO:START (generated by _seo_inject.js) -->
+    <link rel="canonical" href="https://fansist.github.io/pawsitive-friends-mobile-dog-grooming/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Pawsitive Friends Mobile Dog Grooming" />
+    <meta property="og:title" content="Pawsitive Friends Mobile Dog Grooming in San Diego" />
+    <meta property="og:description" content="Full-service dog grooming at your door, bilingual service, and easy text-to-book scheduling." />
+    <meta property="og:url" content="https://fansist.github.io/pawsitive-friends-mobile-dog-grooming/" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Pawsitive Friends Mobile Dog Grooming in San Diego" />
+    <meta name="twitter:description" content="Full-service dog grooming at your door, bilingual service, and easy text-to-book scheduling." />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Pawsitive Friends Mobile Dog Grooming","url":"https://fansist.github.io/pawsitive-friends-mobile-dog-grooming/","telephone":"619-395-9440","address":{"@type":"PostalAddress","addressLocality":"San Diego","addressRegion":"CA","addressCountry":"US"},"description":"Mobile dog grooming van serving greater San Diego; full grooms, baths, nail trims at your driveway","areaServed":{"@type":"City","name":"San Diego"}}</script>
+    <!-- SEO:END -->
+  </head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo-mark" href="#top">
+      <svg width="34" height="34" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false">
+        <circle cx="24" cy="24" r="24" fill="#c1552f"/>
+        <circle cx="16" cy="16" r="4" fill="#fbf2e4"/>
+        <circle cx="32" cy="16" r="4" fill="#fbf2e4"/>
+        <circle cx="11" cy="26" r="3.6" fill="#fbf2e4"/>
+        <circle cx="37" cy="26" r="3.6" fill="#fbf2e4"/>
+        <ellipse cx="24" cy="30" rx="9" ry="7.5" fill="#fbf2e4"/>
+      </svg>
+      <span>Pawsitive Friends <span class="brand-accent">Mobile Grooming</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" id="navToggle">
+      <span class="visually-hidden">Toggle navigation menu</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M3 6h18M3 12h18M3 18h18" stroke="#241f19" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <nav class="main-nav" id="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#visit">Visit</a></li>
+        <li><a class="nav-cta" href="tel:6193959440">Call 619-395-9440</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-scrim" aria-hidden="true"></div>
+    <svg class="hero-art" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+      <path d="M0 520 Q150 470 320 505 T650 490 T980 520 T1200 480 V700 H0 Z" fill="rgba(255,252,246,0.05)"/>
+      <path d="M0 580 Q200 540 400 570 T800 555 T1200 580 V700 H0 Z" fill="rgba(255,252,246,0.04)"/>
+      <circle cx="1040" cy="150" r="120" fill="rgba(235,162,41,0.08)"/>
+      <circle cx="120" cy="580" r="90" fill="rgba(193,85,47,0.10)"/>
+    </svg>
+    <div class="hero-inner">
+      <span class="eyebrow">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l2.4 6.6L21 10l-5 4.2L17.4 21 12 17.3 6.6 21 8 14.2 3 10l6.6-1.4L12 2z" fill="#eba229"/></svg>
+        Mobile Dog Grooming &middot; San Diego
+      </span>
+      <h1>Happy dogs, stress-free grooming <span class="accent">right at your driveway.</span></h1>
+      <p class="hero-tagline">Full grooms, baths, and nail trims from a trusted local pro who comes to you, anywhere in greater San Diego.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="tel:6193959440">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z" fill="#152722"/></svg>
+          Call 619-395-9440
+        </a>
+        <a class="btn btn-secondary" href="#visit">See service area &amp; hours</a>
+      </div>
+      <p class="hero-note">Bilingual (English/Spanish) &middot; Text-to-book scheduling &middot; <strong>69 Yelp reviews</strong></p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-art reveal">
+        <svg viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+          <ellipse cx="100" cy="150" rx="60" ry="14" fill="rgba(0,0,0,0.14)"/>
+          <path d="M60 95c0-25 18-40 40-40s40 15 40 40-15 60-40 60-40-35-40-60z" fill="#fffcf6"/>
+          <circle cx="72" cy="70" r="13" fill="#fffcf6"/>
+          <circle cx="128" cy="70" r="13" fill="#fffcf6"/>
+          <circle cx="46" cy="92" r="10" fill="#fffcf6"/>
+          <circle cx="154" cy="92" r="10" fill="#fffcf6"/>
+          <circle cx="88" cy="98" r="4.5" fill="#241f19"/>
+          <circle cx="112" cy="98" r="4.5" fill="#241f19"/>
+          <ellipse cx="100" cy="112" rx="6" ry="4.5" fill="#c1552f"/>
+          <path d="M92 118q8 8 16 0" stroke="#241f19" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M40 40q14 6 18 20" stroke="#fffcf6" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.85"/>
+          <path d="M160 40q-14 6-18 20" stroke="#fffcf6" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.85"/>
+        </svg>
+      </div>
+      <div class="about-copy reveal">
+        <span class="kicker">About Pawsitive Friends</span>
+        <h2>Grooming that comes to you, from a groomer your neighbors already trust.</h2>
+        <p>Pawsitive Friends is a mobile dog grooming van serving greater San Diego, bringing full grooms, baths, and nail trims right to your driveway. No stressful car rides, no waiting rooms, just your dog, comfortable at home, getting a full-service groom from a friendly, trusted local pro.</p>
+        <div class="about-badges">
+          <span class="about-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9C1 8 2.8 4.5 6.2 4.1c2-.2 3.6.9 4.8 2.4C12.2 5 13.8 3.9 15.8 4.1c3.4.4 5.2 3.9 3.7 7.9-2.5 4.5-9.5 9-9.5 9z" fill="#25453c"/></svg>
+            Owner-operated by groomer Abelina
+          </span>
+          <span class="about-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C7 2 3 6 3 11c0 5 9 11 9 11s9-6 9-11c0-5-4-9-9-9z" stroke="#25453c" stroke-width="1.8" fill="none"/><circle cx="12" cy="11" r="3" fill="#25453c"/></svg>
+            Serves all of San Diego
+          </span>
+          <span class="about-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10" stroke="#25453c" stroke-width="1.8" stroke-linecap="round"/></svg>
+            Bilingual English / Spanish
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Services</span>
+        <h2>Full-service grooming, delivered to your door</h2>
+        <p>Every visit is done in the van parked right outside your home, convenient for you, calm for your dog.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal reveal-stagger" style="--stagger:0s">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 18v-3a4 4 0 014-4h8a4 4 0 014 4v3M6 11V9a2 2 0 012-2h8a2 2 0 012 2v2" stroke="#96401f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="19" r="1.4" fill="#96401f"/><circle cx="16" cy="19" r="1.4" fill="#96401f"/></svg>
+          </div>
+          <h3>Mobile grooming at your home</h3>
+          <p>In-home service in our fully equipped van, no drop-off, no drive, no waiting room stress.</p>
+        </div>
+        <div class="service-card reveal reveal-stagger" style="--stagger:0.08s">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9C1 8 2.8 4.5 6.2 4.1c2-.2 3.6.9 4.8 2.4C12.2 5 13.8 3.9 15.8 4.1c3.4.4 5.2 3.9 3.7 7.9-2.5 4.5-9.5 9-9.5 9z" stroke="#96401f" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Full-service grooming, all sizes</h3>
+          <p>Complete grooms and baths tailored to dogs of every size and coat type.</p>
+        </div>
+        <div class="service-card reveal reveal-stagger" style="--stagger:0.16s">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 8h14M5 8a3 3 0 116 0M19 8a3 3 0 11-6 0M8 8v10a2 2 0 002 2h4a2 2 0 002-2V8" stroke="#96401f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Bilingual service</h3>
+          <p>Groomer Abelina is happy to serve families in English or Spanish.</p>
+        </div>
+        <div class="service-card reveal reveal-stagger" style="--stagger:0.24s">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 5h13a2 2 0 012 2v12l-4-3H4a2 2 0 01-2-2V7a2 2 0 012-2z" stroke="#96401f" stroke-width="1.8" fill="none" stroke-linejoin="round"/><circle cx="8" cy="11" r="1" fill="#96401f"/><circle cx="12" cy="11" r="1" fill="#96401f"/><circle cx="16" cy="11" r="1" fill="#96401f"/></svg>
+          </div>
+          <h3>Text-to-book scheduling</h3>
+          <p>Skip the phone tag, text to find a time that works and get on the schedule.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY (illustrative, since no on-file business photos yet) -->
+  <section class="gallery" id="gallery" aria-labelledby="gallery-heading">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">A Peek At The Van</span>
+        <h2 id="gallery-heading">What a driveway visit looks like</h2>
+        <p>Illustrative preview, real before &amp; after photos coming soon. Ask to see recent work when you call or text.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-tile tile-1 reveal reveal-stagger" style="--stagger:0s">
+          <svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect x="15" y="40" width="70" height="35" rx="8" fill="#fffcf6" opacity="0.92"/><circle cx="32" cy="78" r="8" fill="#241f19"/><circle cx="68" cy="78" r="8" fill="#241f19"/><rect x="55" y="28" width="24" height="18" rx="4" fill="#fffcf6" opacity="0.92"/><rect x="60" y="33" width="8" height="8" fill="#c1552f"/></svg>
+          <span class="tile-label">The grooming van</span>
+        </div>
+        <div class="gallery-tile tile-2 reveal reveal-stagger" style="--stagger:0.08s">
+          <svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><ellipse cx="50" cy="60" rx="26" ry="20" fill="#fffcf6" opacity="0.92"/><circle cx="38" cy="42" r="9" fill="#fffcf6" opacity="0.92"/><circle cx="62" cy="42" r="9" fill="#fffcf6" opacity="0.92"/><circle cx="44" cy="58" r="2.5" fill="#152722"/><circle cx="56" cy="58" r="2.5" fill="#152722"/><path d="M42 66q8 6 16 0" stroke="#152722" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+          <span class="tile-label">Fresh bath &amp; brush</span>
+        </div>
+        <div class="gallery-tile tile-3 reveal reveal-stagger" style="--stagger:0.16s">
+          <svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path d="M50 20l6.5 17.5L74 42l-14 12 4 18.5L50 62l-14 10.5 4-18.5L26 42l17.5-4.5z" fill="#fffcf6" opacity="0.92"/></svg>
+          <span class="tile-label">Nail trim &amp; finishing</span>
+        </div>
+        <div class="gallery-tile tile-4 reveal reveal-stagger" style="--stagger:0.24s">
+          <svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path d="M50 78s-22-13-22-30c0-9 7-15 15-15 4 0 8 2 7 6 1-4 5-6 9-6 8 0 15 6 15 15 0 17-24 30-24 30z" fill="#fffcf6" opacity="0.92"/></svg>
+          <span class="tile-label">One happy pup</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="highlights" aria-labelledby="highlights-heading">
+    <div class="container">
+      <h2 id="highlights-heading" class="visually-hidden">Why choose Pawsitive Friends</h2>
+      <div class="highlights-grid">
+        <div class="highlight-item reveal">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C7 2 3 6 3 11c0 5 9 11 9 11s9-6 9-11c0-5-4-9-9-9z" fill="#fff" opacity="0.9"/><circle cx="12" cy="11" r="3" fill="#152722"/></svg>
+          <span class="num">San Diego</span>
+          <span class="label">Mobile service area, driveway to driveway</span>
+        </div>
+        <div class="highlight-item reveal">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l2.4 6.6L21 10l-5 4.2L17.4 21 12 17.3 6.6 21 8 14.2 3 10l6.6-1.4L12 2z" fill="#fff" opacity="0.9"/></svg>
+          <span class="num">69 reviews</span>
+          <span class="label">Yelp reviews from local dog owners</span>
+        </div>
+        <div class="highlight-item reveal">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.9"/></svg>
+          <span class="num">Bilingual</span>
+          <span class="label">Service offered in English &amp; Spanish</span>
+        </div>
+        <div class="highlight-item reveal">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9C1 8 2.8 4.5 6.2 4.1c2-.2 3.6.9 4.8 2.4C12.2 5 13.8 3.9 15.8 4.1c3.4.4 5.2 3.9 3.7 7.9-2.5 4.5-9.5 9-9.5 9z" fill="#fff" opacity="0.9"/></svg>
+          <span class="num">Owner-run</span>
+          <span class="label">Personal, trusted care from groomer Abelina</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Good To Know</span>
+        <h2>Frequently asked questions</h2>
+        <p>A few honest answers before you call or text.</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item reveal">
+          <summary>
+            How does mobile dog grooming actually work?
+            <span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="#241f19" stroke-width="2.5" stroke-linecap="round"/></svg></span>
+          </summary>
+          <div class="faq-answer">The grooming van comes directly to your home and parks outside, usually in your driveway or on the street. Your dog is groomed in the fully equipped van, so there's no drop-off, no car ride for your dog, and no waiting room.</div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>
+            Do you groom all dog sizes and breeds?
+            <span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="#241f19" stroke-width="2.5" stroke-linecap="round"/></svg></span>
+          </summary>
+          <div class="faq-answer">Yes, full-service grooming is offered for dogs of all sizes and coat types, including baths and nail trims.</div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>
+            What areas of San Diego do you serve?
+            <span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="#241f19" stroke-width="2.5" stroke-linecap="round"/></svg></span>
+          </summary>
+          <div class="faq-answer">Pawsitive Friends is a mobile service covering greater San Diego. Call or text 619-395-9440 to confirm the van can reach your specific neighborhood.</div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>
+            How do I book an appointment?
+            <span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="#241f19" stroke-width="2.5" stroke-linecap="round"/></svg></span>
+          </summary>
+          <div class="faq-answer">Text-to-book is available, so you can skip the phone tag, just send a text to 619-395-9440. You're also welcome to call, and service is available in English or Spanish.</div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>
+            What days are you open?
+            <span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="#241f19" stroke-width="2.5" stroke-linecap="round"/></svg></span>
+          </summary>
+          <div class="faq-answer">Open Monday through Saturday. Call or text to check available appointment times for your day.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section class="visit" id="visit">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Book a Visit</span>
+        <h2>We'll come to you</h2>
+        <p>Text or call to schedule your dog's mobile groom anywhere in greater San Diego.</p>
+      </div>
+      <div class="visit-grid">
+        <div class="visit-card reveal">
+          <div class="visit-row">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z" fill="#96401f"/></svg>
+            </span>
+            <div>
+              <h3>Phone</h3>
+              <a class="value-link" href="tel:6193959440">619-395-9440</a>
+              <p>Call or text to book, bilingual service available.</p>
+            </div>
+          </div>
+          <div class="visit-row">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C7 2 3 6 3 11c0 5 9 11 9 11s9-6 9-11c0-5-4-9-9-9z" stroke="#96401f" stroke-width="1.8" fill="none"/><circle cx="12" cy="11" r="3" fill="#96401f"/></svg>
+            </span>
+            <div>
+              <h3>Service area</h3>
+              <p>San Diego, CA, mobile grooming van comes to your home, driveway to driveway.</p>
+            </div>
+          </div>
+          <div class="visit-row">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#96401f" stroke-width="1.8" fill="none"/><path d="M12 7v5l3.5 2" stroke="#96401f" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </span>
+            <div>
+              <h3>Hours</h3>
+              <p>Open Monday through Saturday. Call or text for available appointment times.</p>
+            </div>
+          </div>
+          <div class="visit-row">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 8h14M5 8a3 3 0 116 0M19 8a3 3 0 11-6 0M8 8v10a2 2 0 002 2h4a2 2 0 002-2V8" stroke="#96401f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <h3>Find us online</h3>
+              <p>Also on Yelp, Facebook, Instagram &amp; Nextdoor, search "Pawsitive Friends Mobile Dog Grooming."</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-card reveal">
+          <svg class="deco" width="160" height="160" viewBox="0 0 24 24" style="top:-20px;right:-20px;" fill="#fff" aria-hidden="true"><path d="M12 2C7 2 3 6 3 11c0 5 9 11 9 11s9-6 9-11c0-5-4-9-9-9z"/></svg>
+          <div>
+            <h3>Ready when you are</h3>
+            <p>We come to your driveway anywhere in greater San Diego. Tap below for directions or to confirm the area.</p>
+          </div>
+          <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=Pawsitive%20Friends%20Mobile%20Dog%20Grooming%20San%20Diego%2C%20CA" target="_blank" rel="noopener noreferrer">
+            Open in Google Maps
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="container reveal">
+      <h2>Your dog's happy place is your driveway.</h2>
+      <p>Text or call Pawsitive Friends to book a stress-free, full-service mobile groom.</p>
+      <a class="btn btn-primary" href="tel:6193959440">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z" fill="#fff"/></svg>
+        Call 619-395-9440
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <svg width="30" height="30" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <circle cx="24" cy="24" r="24" fill="#c1552f"/>
+          <circle cx="16" cy="16" r="4" fill="#fbf2e4"/>
+          <circle cx="32" cy="16" r="4" fill="#fbf2e4"/>
+          <circle cx="11" cy="26" r="3.6" fill="#fbf2e4"/>
+          <circle cx="37" cy="26" r="3.6" fill="#fbf2e4"/>
+          <ellipse cx="24" cy="30" rx="9" ry="7.5" fill="#fbf2e4"/>
+        </svg>
+        Pawsitive Friends Mobile Dog Grooming
+      </div>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#visit">Visit</a></li>
+          <li><a href="tel:6193959440">Call</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Pawsitive Friends Mobile Dog Grooming &middot; San Diego, CA</span>
+      <span>Mobile dog grooming serving greater San Diego</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    "use strict";
+
+    var toggle = document.getElementById('navToggle');
+    var nav = document.getElementById('primary-nav');
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', function(){
+        var isOpen = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      nav.querySelectorAll('a').forEach(function(link){
+        link.addEventListener('click', function(){
+          nav.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var revealEls = document.querySelectorAll('.reveal');
+
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      revealEls.forEach(function(el){ el.classList.add('in-view'); });
+    } else {
+      var observer = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      revealEls.forEach(function(el){ observer.observe(el); });
+    }
+  })();
+</script>
+
+</body>
+</html>
